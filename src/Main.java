@@ -44,32 +44,30 @@ public class Main {
     }
     public static void task3() {
         System.out.println("Задача 3");
-        System.out.println("Класс Людмилы Павловны");
         int paper = 480;
         int classL = 23;
-        int paperL = paper / classL;
-        System.out.println("На каждого ученика рассчитано " + paperL + " листов бумаги");
-        System.out.println("Класс Анны Сергеевны");
         int classA = 27;
-        int paperA = paper / classA;
-        System.out.println("На каждого ученика рассчитано " + paperA + " листов бумаги");
-        System.out.println("Класс Екатерины Андреевны");
         int classE = 30;
-        int paperE = paper / classE;
-        System.out.println("На каждого ученика рассчитано " + paperE + " листов бумаги");
+        int totalPeoples = classL + classA + classE;
+        int paperPerPeople = paper / totalPeoples;
+        System.out.println("На каждого ученика рассчитано " + paperPerPeople + " листов бумаги");
+
     }
     public static void task4() {
         System.out.println("Задача 4");
         System.out.println("Производительность машины для изготовления бутылок — 16 бутылок за 2 минуты");
-        int bottle = 16;
-        int process1 = (bottle / 2) * 20;
-        System.out.println("За 20 минут машина произвела " + process1 + " штук бутылок");
-        int process2 = (bottle / 2) * 1440;
-        System.out.println("За 1 день машина произвела " + process2 + " штук бутылок");
-        int process3 = (bottle / 2) * 4320;
-        System.out.println("За 3 дня машина произвела " + process3 + " штук бутылок");
-        int process4 = (bottle / 2) * 44640;
-        System.out.println("За 1 месяц машина произвела " + process4 + " штук бутылок");
+        int bottles = 16;
+        int minutes = 2;
+        int productPerMinute = bottles / minutes;
+        int productPer20Minutes = productPerMinute * 20;
+        System.out.println("За 20 минут машина произвела " + productPer20Minutes + " штук бутылок");
+        int productPerHour = productPer20Minutes * 3;
+        int productPerDay = productPerHour * 24;
+        System.out.println("За 1 день машина произвела " + productPerDay + " штук бутылок");
+        int productPer3Days = productPerDay * 3;
+        System.out.println("За 3 дня машина произвела " + productPer3Days + " штук бутылок");
+        int productPerMouth = productPer3Days * 10;
+        System.out.println("За 1 месяц машина произвела " + productPerMouth + " штук бутылок");
     }
     public static void task5() {
         System.out.println("Задача 5");
@@ -86,19 +84,19 @@ public class Main {
     }
     public static void task6() {
         System.out.println("Задача 6");
-        short bananas = 400;
-        System.out.println("Масса 5 бананов " + bananas + " грамм");
-        short milk = 210;
-        System.out.println("Масса 200 мл молока равно " + milk + " грамм");
-        short iceCream = 200;
-        System.out.println("Масса 2 брикетов мороженого " + iceCream + " грамм");
-        short egg = 280;
-        System.out.println("Масса 4 яиц " + egg + " грамм");
-        int breakfastWeight = bananas + milk + iceCream + egg;
-        System.out.println("Масса завтрака " + breakfastWeight + " грамм");
-        int grPerKg = 1000;
-        float breakfastWeightKg = (float) grPerKg / breakfastWeight;
-        System.out.println("Масс завтрака " + breakfastWeightKg + " кг");
+        int bananasCount = 5;
+        int milkCount = 2;
+        int iceCreamCount = 2;
+        int eggCount = 4;
+        int weightBananaGr = 80;
+        int weightMilkGr = 105;
+        int weightIceCreamGr = 100;
+        int weightEggGr = 70;
+        int totalWeightGr = bananasCount * weightBananaGr + milkCount * weightMilkGr + iceCreamCount * weightIceCreamGr + eggCount * weightEggGr;
+        System.out.println("Масса завтрака " + totalWeightGr + " грамм");
+        double grPerKg = 1000;
+        double totalWeightKg = totalWeightGr / grPerKg;
+        System.out.println("Масс завтрака " + totalWeightKg + " кг");
     }
     public static void task7() {
         System.out.println("Задача 7");
