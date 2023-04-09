@@ -110,9 +110,8 @@ public class Main {
         System.out.println("Если спортсмен каждый день будет терять по " + loseMinWeight + " грамм то он похудеет за " + maxDays + " дней");
         int minDays = weight / loseMaxWeight;
         System.out.println("Если спортсмен каждый день будет терять по " + loseMaxWeight + " грамм то он похудеет за " + minDays + " дней");
-        int loseMidWeight = 300;
-        int midDays = weight / loseMidWeight;
-        System.out.println("В среднем если спортсмен каждый день будет терять по " + loseMidWeight + " грамм то он похудеет за " + midDays + " дней");
+        int midDays = (loseMaxWeight + loseMinWeight) % maxDays;
+        System.out.println("В среднем спортсмен похудеет за " + midDays + " дней");
     }
     public static void task8() {
         System.out.println("Задача 8");
